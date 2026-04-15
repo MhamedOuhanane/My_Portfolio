@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# 🚀 M'Hamed Ouhanane - Professional Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=blue)
 
-## Available Scripts
+A modern, highly responsive, and interactive personal portfolio built specifically to showcase my skills as a **Java Full-Stack Developer**. The project leverages modern React features, smooth animations, and a polished design system to provide an engaging user experience.
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- **Modern UI/UX**: Clean aesthetic with dynamic glassmorphism and animated backgrounds.
+- **Dark/Light Mode**: Full theme-switching support implemented via Context API and Tailwind CSS, with local storage persistence.
+- **Smooth Animations**: Page transitions, scroll reveals, and interactive micro-animations powered by Framer Motion.
+- **Dynamic Projects Section**: Integrated pagination system dividing featured "Top 3" projects from the rest of the portfolio.
+- **Interactive Hero Section**: Custom typewriter hook and glowing particle effects.
+- **CV Download Integration**: Direct PDF download implementation for multilingual resumes (EN/FR).
+- **Responsive Design**: Flawless display across mobile, tablet, and desktop viewports.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Framework**: [React.js](https://reactjs.org/) (Create React App + functional components & hooks)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
 
-### `npm test`
+## 📂 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```text
+my_portfolio/
+├── public/                 # Static assets, images, CVs, and index.html
+└── src/
+    ├── components/         # Modular React components (Hero, About, Projects, etc.)
+    ├── context/            # React Context for Dark/Light mode state
+    ├── data/               # Centralized data file (portfolio.js)
+    ├── hooks/              # Custom React hooks (useInView, useTypewriter)
+    ├── App.jsx             # Main application layout and routes
+    ├── index.css           # Global Tailwind imports & custom classes
+    └── index.js            # React DOM entry point
+```
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Follow these steps to run the portfolio on your local machine:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You need Node.js and npm installed.
+- Node.js (v14 or higher recommended)
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repo:
+   ```sh
+   git clone https://github.com/MhamedOuhanane/my_portfolio.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd my_portfolio
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm start
+   ```
+5. Open your browser and visit `http://localhost:3000`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📝 Configuration & Content
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+All portfolio data (name, bio, skills, projects, and experiences) is strictly centralized in `src/data/portfolio.js`. You can easily update your profile by modifying this single file without ever touching the UI components!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To handle your contact form properly via email, you'll want to configure **EmailJS** in the `Contact.jsx` component using your own API credentials.
 
-## Learn More
+## 📫 Contact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**M'Hamed Ouhanane** 
+- Email: [mhmdeouhnan60@gmail.com](mailto:mhmdeouhnan60@gmail.com)
+- LinkedIn: [in/m-hamed-ouhanane](https://www.linkedin.com/in/m-hamed-ouhanane-986688340)
+- GitHub: [@MhamedOuhanane](https://github.com/MhamedOuhanane)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+*Developed by M'Hamed Ouhanane*
