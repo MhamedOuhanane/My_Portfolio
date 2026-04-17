@@ -85,7 +85,7 @@ const About = () => {
               {[
                 { icon: FaMapMarkerAlt, text: personalInfo.location, color: "text-red-500" },
                 { icon: FaEnvelope, text: personalInfo.email, color: "text-marine-500" },
-                { icon: FaPhone, text: personalInfo.phone, color: "text-green-500" },
+                // { icon: FaPhone, text: personalInfo.phone, color: "text-green-500" },
                 { icon: FaGithub, text: "MhamedOuhanane", color: "text-gray-700 dark:text-gray-300" },
               ].map(({ icon: Icon, text, color }, i) => (
                 <motion.div

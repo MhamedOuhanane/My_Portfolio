@@ -54,13 +54,13 @@ const Contact = () => {
       href: `mailto:${personalInfo.email}`,
       color: "from-blue-500 to-cyan-500",
     },
-    {
-      icon: FaPhone,
-      label: "Téléphone",
-      value: personalInfo.phone,
-      href: `tel:${personalInfo.phone.replace(/-/g, "")}`,
-      color: "from-green-500 to-emerald-500",
-    },
+    // {
+    //   icon: FaPhone,
+    //   label: "Phone",
+    //   value: personalInfo.phone,
+    //   href: `tel:${personalInfo.phone.replace(/-/g, "")}`,
+    //   color: "from-green-500 to-emerald-500",
+    // },
     {
       icon: FaGithub,
       label: "GitHub",
