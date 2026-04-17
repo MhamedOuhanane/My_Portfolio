@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaPaperPlane, FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaCheck, FaSpinner } from "react-icons/fa";
+import { FaPaperPlane, FaEnvelope, FaMapMarkerAlt, FaGithub, FaCheck, FaSpinner } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { useInView } from "../hooks/useInView";
 import { personalInfo } from "../data/portfolio";

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaGithub } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope, FaGithub } from "react-icons/fa";
 import { useInView } from "../hooks/useInView";
 import { personalInfo, languages, interests, projects, experiences, skills } from "../data/portfolio";
 
