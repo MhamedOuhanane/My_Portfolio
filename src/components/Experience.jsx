@@ -1,6 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaBriefcase, FaMapMarkerAlt, FaCalendar } from "react-icons/fa";
+import {
+  FaBriefcase,
+  FaMapMarkerAlt,
+  FaCalendar,
+  FaBullseye,
+} from "react-icons/fa";
 import { useInView } from "../hooks/useInView";
 import { experiences } from "../data/portfolio";
 
@@ -8,7 +13,11 @@ const Experience = () => {
   const [ref, isInView] = useInView({ threshold: 0.1 });
 
   return (
-    <section id="experience" ref={ref} className="relative bg-white dark:bg-dark-400 overflow-hidden">
+    <section
+      id="experience"
+      ref={ref}
+      className="relative bg-white dark:bg-dark-400 overflow-hidden"
+    >
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-marine-500/30 to-transparent" />
 
       <div className="section-container">
@@ -18,8 +27,10 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-sm font-mono font-semibold text-marine-600 dark:text-marine-400 
-                         tracking-widest uppercase mb-4 block">
+          <span
+            className="text-sm font-mono font-semibold text-marine-600 dark:text-marine-400 
+                         tracking-widest uppercase mb-4 block"
+          >
             Experience
           </span>
           <h2 className="section-title text-gray-900 dark:text-white">
@@ -67,10 +78,19 @@ const Experience = () => {
                 </div>
 
                 {exp.project && (
-                  <div className="mb-4 p-3 rounded-xl bg-marine-50 dark:bg-marine-900/20 
-                                border border-marine-200 dark:border-marine-700/50">
-                    <span className="text-sm font-semibold text-marine-700 dark:text-marine-300">
-                      🎯 Project: {exp.project}
+                  <div
+                    className="mb-4 p-3 rounded-xl bg-marine-50 dark:bg-marine-900/20 
+                      border border-marine-200 dark:border-marine-700/50"
+                  >
+                    <span
+                      className="text-sm font-semibold text-marine-700 dark:text-marine-300
+                                       flex items-center gap-2"
+                    >
+                      <FaBullseye
+                        className="text-marine-600 dark:text-marine-400"
+                        size={14}
+                      />
+                      Project: {exp.project}
                     </span>
                   </div>
                 )}

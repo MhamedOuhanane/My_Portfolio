@@ -1,38 +1,55 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaMapMarkerAlt, FaEnvelope, FaGithub } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaGithub,
+  FaBriefcase,
+  FaBolt,
+  FaRocket,
+  FaGlobe,
+  FaTrophy,
+} from "react-icons/fa";
 import { useInView } from "../hooks/useInView";
-import { personalInfo, languages, interests, projects, experiences, skills } from "../data/portfolio";
+import {
+  personalInfo,
+  languages,
+  interests,
+  projects,
+  experiences,
+  skills,
+} from "../data/portfolio";
 
 const About = () => {
   const [ref, isInView] = useInView({ threshold: 0.2 });
 
-    const projectsCount = projects.length;
-  const totalSkills = 
-    skills.languages.length + 
-    skills.frameworks.length + 
-    skills.databases.length + 
+  const projectsCount = projects.length;
+  const totalSkills =
+    skills.languages.length +
+    skills.frameworks.length +
+    skills.databases.length +
     skills.tools.length;
-  const internshipCount = experiences.filter(exp => 
-    exp.title.toLowerCase().includes('intern') || 
-    exp.title.toLowerCase().includes('stage')
+  const internshipCount = experiences.filter(
+    (exp) =>
+      exp.title.toLowerCase().includes("intern") ||
+      exp.title.toLowerCase().includes("stage"),
   ).length;
 
   const stats = [
-    { 
-      label: "Projects", 
-      value: `${projectsCount}+`, 
-      icon: "🚀" 
+    {
+      label: "Projects",
+      value: `${projectsCount}+`,
+      icon: <FaRocket className="text-orange-500" />,
     },
-    { 
-      label: "Technologies", 
-      value: `${totalSkills}+`, 
-      icon: "⚡" 
+    {
+      label: "Technologies",
+      value: `${totalSkills}+`,
+      icon: <FaBolt className="text-yellow-500" />,
     },
-    { 
-      label: "Internships", 
-      value: internshipCount, 
-      icon: "💼" 
+    {
+      label: "Internships",
+      value: internshipCount,
+      icon: <FaBriefcase className="text-blue-500" />,
     },
   ];
 
@@ -51,8 +68,10 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-sm font-mono font-semibold text-marine-600 dark:text-marine-400 
-                         tracking-widest uppercase mb-4 block">
+          <span
+            className="text-sm font-mono font-semibold text-marine-600 dark:text-marine-400 
+                         tracking-widest uppercase mb-4 block"
+          >
             About
           </span>
           <h2 className="section-title text-gray-900 dark:text-white">
@@ -76,17 +95,33 @@ const About = () => {
                            overflow-hidden shadow-2xl shadow-marine-700/30 p-1"
               >
                 <div className="w-full h-full rounded-[20px] overflow-hidden bg-white dark:bg-dark-300">
-                  <img src="/portfolio_logo.jpg" alt="M'Hamed Ouhanane" className="w-full h-full object-cover" />
+                  <img
+                    src="/portfolio_logo.jpg"
+                    alt="M'Hamed Ouhanane"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
 
             <div className="space-y-3">
               {[
-                { icon: FaMapMarkerAlt, text: personalInfo.location, color: "text-red-500" },
-                { icon: FaEnvelope, text: personalInfo.email, color: "text-marine-500" },
+                {
+                  icon: FaMapMarkerAlt,
+                  text: personalInfo.location,
+                  color: "text-red-500",
+                },
+                {
+                  icon: FaEnvelope,
+                  text: personalInfo.email,
+                  color: "text-marine-500",
+                },
                 // { icon: FaPhone, text: personalInfo.phone, color: "text-green-500" },
-                { icon: FaGithub, text: "MhamedOuhanane", color: "text-gray-700 dark:text-gray-300" },
+                {
+                  icon: FaGithub,
+                  text: "MhamedOuhanane",
+                  color: "text-gray-700 dark:text-gray-300",
+                },
               ].map(({ icon: Icon, text, color }, i) => (
                 <motion.div
                   key={i}
@@ -96,10 +131,14 @@ const About = () => {
                   className="flex items-center gap-4 p-3 rounded-xl 
                              hover:bg-gray-50 dark:hover:bg-dark-300 transition-all"
                 >
-                  <div className={`p-2 rounded-lg bg-gray-100 dark:bg-dark-300 ${color}`}>
+                  <div
+                    className={`p-2 rounded-lg bg-gray-100 dark:bg-dark-300 ${color}`}
+                  >
                     <Icon size={18} />
                   </div>
-                  <span className="text-gray-700 dark:text-gray-300 text-sm font-medium">{text}</span>
+                  <span className="text-gray-700 dark:text-gray-300 text-sm font-medium">
+                    {text}
+                  </span>
                 </motion.div>
               ))}
             </div>
@@ -124,8 +163,12 @@ const About = () => {
                   transition={{ delay: 0.5 + i * 0.1 }}
                   className="card card-hover p-4 text-center"
                 >
-                  <span className="text-2xl mb-1 block">{stat.icon}</span>
-                  <span className="text-2xl font-bold gradient-text">{stat.value}</span>
+                  <span className="text-2xl mb-2 flex justify-center">
+                    {stat.icon}
+                  </span>
+                  <span className="text-2xl font-bold gradient-text">
+                    {stat.value}
+                  </span>
                   <span className="text-xs text-gray-500 dark:text-gray-400 block mt-1">
                     {stat.label}
                   </span>
@@ -134,8 +177,12 @@ const About = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-display font-bold text-gray-900 dark:text-white mb-4">
-                🌍 Languages
+              <h3
+                className="text-lg font-display font-bold text-gray-900 dark:text-white mb-4
+               flex items-center gap-2"
+              >
+                <FaGlobe className="text-marine-500" size={18} />
+                Languages
               </h3>
               <div className="space-y-3">
                 {languages.map((lang) => (
@@ -144,12 +191,16 @@ const About = () => {
                       <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                         {lang.name}
                       </span>
-                      <span className="text-xs text-gray-500 dark:text-gray-400">{lang.level}</span>
+                      <span className="text-xs text-gray-500 dark:text-gray-400">
+                        {lang.level}
+                      </span>
                     </div>
                     <div className="h-2 bg-gray-200 dark:bg-dark-200 rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
-                        animate={isInView ? { width: `${lang.percentage}%` } : {}}
+                        animate={
+                          isInView ? { width: `${lang.percentage}%` } : {}
+                        }
                         transition={{ duration: 1, delay: 0.8 }}
                         className="h-full bg-gradient-to-r from-marine-600 to-navy-500 rounded-full"
                       />
@@ -160,8 +211,12 @@ const About = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-display font-bold text-gray-900 dark:text-white mb-4">
-                🏆 Interests
+              <h3
+                className="text-lg font-display font-bold text-gray-900 dark:text-white mb-4
+               flex items-center gap-2"
+              >
+                <FaTrophy className="text-yellow-500" size={18} />
+                Interests
               </h3>
               <div className="flex gap-3 flex-wrap">
                 {interests.map(({ name, icon: Icon }) => (

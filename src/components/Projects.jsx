@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaChevronRight, FaChevronLeft, FaStar } from "react-icons/fa";
 import { useInView } from "../hooks/useInView";
 import { projects } from "../data/portfolio";
 
@@ -39,9 +39,9 @@ const ProjectCard = ({ project, index, isInView }) => {
         </motion.div>
 
         {project.featured && (
-          <span className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold 
-                         bg-white/20 backdrop-blur-sm text-white border border-white/30">
-            ⭐ Featured
+          <span className="absolute flex items-center top-4 right-4 gap-1 px-3 py-1 rounded-full text-xs font-bold 
+                         bg-blue-400/20 backdrop-blur-sm text-blue-400 border border-white/30">
+            <FaStar className="text-yellow-400" size={12} /> Featured
           </span>
         )}
 
