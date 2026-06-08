@@ -91,7 +91,7 @@ export const experiences = [
     title: "Full-Stack Web & Mobile Developer | Internship",
     company: "INVENIO",
     location: "Marrakech, Morocco",
-    period: "May 2026 - Present",
+    period: "April 2026 - Present",
     project: "Deelo - Mobile Application",
     description: [
       "Contributing to the ongoing development and scaling of 'Deelo', a cross-platform mobile application utilizing Expo and React Native",
