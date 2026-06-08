@@ -14,6 +14,7 @@ import {
   FaJs,
   FaVolleyballBall,
   FaFutbol,
+  FaMobileAlt,
 } from "react-icons/fa";
 import {
   SiSpringboot,
@@ -65,6 +66,7 @@ export const skills = {
     { name: "Laravel", icon: FaLaravel, level: 78, color: "#ff2d20" },
     { name: "Tailwind CSS", icon: SiTailwindcss, level: 90, color: "#06b6d4" },
     { name: "Bootstrap", icon: FaBootstrap, level: 85, color: "#7952b3" },
+    { name: "React Native / Expo", icon: FaMobileAlt, level: 65, color: "#4630eb" }
   ],
   databases: [
     { name: "MySQL", icon: SiMysql, level: 82, color: "#4479a1" },
@@ -85,6 +87,17 @@ export const skills = {
 };
 
 export const experiences = [
+  {
+    title: "Full-Stack Web & Mobile Developer | Internship",
+    company: "INVENIO",
+    location: "Marrakech, Morocco",
+    period: "May 2026 - Present",
+    project: "Deelo - Mobile Application",
+    description: [
+      "Contributing to the ongoing development and scaling of 'Deelo', a cross-platform mobile application utilizing Expo and React Native",
+    ],
+    technologies: ["React Native", "Expo", "NestJS", "Tailwind CSS", "Git"],
+  },
   {
     title: "Full-Stack Web Developer | Internship",
     company: "EYSI - Digital Agency",
