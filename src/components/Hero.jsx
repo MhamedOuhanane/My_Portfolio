@@ -99,20 +99,47 @@ const Hero = () => {
             Passionate Software Engineer specializing in designing and developing robust, scalable, and user-centric web applications. I bridge the gap between elegant front-end interfaces and solid back-end architectures to deliver high-quality digital solutions.
           </motion.p>
 
-          <motion.div
+         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
             className="flex flex-wrap items-center justify-center gap-4 mb-12"
           >
-            <a href={personalInfo.resumeEn || "#"} download="CV_Mhamed_Ouhanane_EN.pdf" className="btn-primary">
-              Download CV (EN)
-              <FaArrowDown className="animate-bounce" />
-            </a>
-            <a href={personalInfo.resumeFr || "#"} download="CV_Mhamed_Ouhanane_FR.pdf" className="btn-secondary">
-              Télécharger CV (FR)
-              <FaArrowDown className="animate-bounce" />
-            </a>
+            {/* Modern CV Download Dropdown */}
+            <div className="relative group inline-block">
+              <button className="btn-primary flex items-center gap-2">
+                <span>Download CV</span>
+                <FaArrowDown className="animate-bounce transition-transform duration-300 group-hover:rotate-180 group-hover:animate-none" />
+              </button>
+              
+              {/* Dropdown Menu */}
+              <div className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 mt-2 w-full rounded-2xl bg-white dark:bg-dark-300 
+                              border border-gray-200 dark:border-gray-700/50 shadow-xl 
+                              opacity-0 invisible scale-95 origin-top
+                              group-hover:opacity-100 group-hover:visible group-hover:scale-100 
+                              transition-all duration-300 z-50 overflow-hidden">
+                <a 
+                  href={personalInfo.resumeEn || "#"} 
+                  download="CV_Mhamed_Ouhanane_EN.pdf"
+                  className="block px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 
+                             hover:bg-marine-50 dark:hover:bg-marine-900/30 hover:text-marine-600 dark:hover:text-marine-400
+                             border-b border-gray-100 dark:border-gray-700/30 transition-colors text-left"
+                >
+                  English Version
+                </a>
+                <a 
+                  href={personalInfo.resumeFr || "#"} 
+                  download="CV_Mhamed_Ouhanane_FR.pdf"
+                  className="block px-5 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 
+                             hover:bg-marine-50 dark:hover:bg-marine-900/30 hover:text-marine-600 dark:hover:text-marine-400
+                             transition-colors text-left"
+                >
+                  French Version
+                </a>
+              </div>
+            </div>
+          
+            {/* Contact Me Button */}
             <a href={`mailto:${personalInfo.email}`} className="btn-secondary border-marine-200">
               <FaEnvelope />
               Contact me

@@ -88,15 +88,18 @@ export const skills = {
 
 export const experiences = [
   {
-    title: "Full-Stack Web & Mobile Developer | Internship",
-    company: "INVENIO",
+    title: "Full-Stack & Mobile Developer | Internship",
+    company: "INVENEO",
     location: "Marrakech, Morocco",
-    period: "April 2026 - Present",
-    project: "Deelo - Mobile Application",
+    period: "April 2026 - July 2026",
+    project: "Deelo & Quassama",
     description: [
-      "Contributing to the ongoing development and scaling of 'Deelo', a cross-platform mobile application utilizing Expo and React Native",
+      "Contributed to the development and optimization of 'Deelo', a cross-platform mobile application utilizing React Native and Expo.",
+      "Enhanced the mobile app's landing page for 'Quassama' by integrating a new interactive UI component using Next.js.",
+      "Successfully implemented a robust multilingual translation system (i18n) to improve global user accessibility.",
+      "Ensured clean code versioning, collaborative code reviews, and seamless integration using Git and GitHub."
     ],
-    technologies: ["React Native", "Expo", "NestJS", "Tailwind CSS", "Git"],
+    technologies: ["React Native", "Expo", "NestJS", "React.js", "Next.js", "Tailwind CSS", "Git", "GitHub"],
   },
   {
     title: "Full-Stack Web Developer | Internship",
